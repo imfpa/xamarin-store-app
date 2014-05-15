@@ -56,7 +56,7 @@ namespace XamarinStore
 			if (string.IsNullOrEmpty (City))
 				return new Tuple<bool, string>(false,"City is required");
 
-			if (Country.ToLower () == "usa") {
+			if (!string.IsNullOrEmpty (Country) && Country.ToLower () == "usa") {
 				var states = await WebService.Shared.GetStates (await WebService.Shared.GetCountryFromCode(Country));
 				if(!states.Contains(State))
 					return new Tuple<bool, string> (false, "State is required");
