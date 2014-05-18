@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ShoppingBasketTableViewCellController">
+            <connections>
+                <outlet property="ivProductImage" destination="D4n-iY-2Uc" id="Q7X-Gz-Yg2"/>
+                <outlet property="lblProductColor" destination="5Eb-8s-Ioa" id="tNY-5N-J8T"/>
+                <outlet property="lblProductName" destination="EL0-FG-nJX" id="eRq-kS-MlQ"/>
+                <outlet property="lblProductPrice" destination="GfY-Fy-jLb" id="6GR-80-hqo"/>
+                <outlet property="lblProductSize" destination="gjp-uE-Ann" id="849-xr-pTP"/>
+                <outlet property="view" destination="4" id="17"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customView id="4" customClass="ShoppingBasketTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="523" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="LBa-Mr-4yL">
+                    <rect key="frame" x="11" y="0.0" width="500" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="498" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="D4n-iY-2Uc">
+                    <rect key="frame" x="17" y="8" width="54" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="s4z-3C-MSA"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EL0-FG-nJX">
+                    <rect key="frame" x="85" y="46" width="303" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Product Name" id="67A-vy-uly">
+                        <font key="font" size="14" name="HelveticaNeue"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gjp-uE-Ann">
+                    <rect key="frame" x="85" y="27" width="183" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Size: " id="nKs-pu-Itk">
+                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="GfY-Fy-jLb">
+                    <rect key="frame" x="431" y="22" width="68" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="$0.00" id="jRU-gC-hBE">
+                        <font key="font" size="14" name="HelveticaNeue-Light"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5Eb-8s-Ioa">
+                    <rect key="frame" x="85" y="8" width="183" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Color: " id="LwX-bF-pgP">
+                        <font key="font" size="12" name="HelveticaNeue-Light"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+    </objects>
+</document>

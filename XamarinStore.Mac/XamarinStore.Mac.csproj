@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26668FFC-1E4A-40B3-896B-47145DBC65DA}</ProjectGuid>
+    <ProjectTypeGuids>{42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XamarinStore.Mac</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>XamarinStore.Mac</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MAC__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LinkMode>Full</LinkMode>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <DefineConstants>__MAC__</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LinkMode>Full</LinkMode>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <EnablePackageSigning>true</EnablePackageSigning>
+    <DefineConstants>__MAC__</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="XamMac" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\mac\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="MainWindowController.cs" />
+    <Compile Include="MainWindow.designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Shared\Data\Color.cs">
+      <Link>Shared\Data\Color.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\EventArgs.cs">
+      <Link>Shared\Data\EventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\FileCache.cs">
+      <Link>Shared\Data\FileCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\Gravatar.cs">
+      <Link>Shared\Data\Gravatar.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\WebService.cs">
+      <Link>Shared\Data\WebService.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Helpers\ListExtensions.cs">
+      <Link>Shared\Helpers\ListExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Country.cs">
+      <Link>Shared\Models\Country.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Order.cs">
+      <Link>Shared\Models\Order.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\OrderResult.cs">
+      <Link>Shared\Models\OrderResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Product.cs">
+      <Link>Shared\Models\Product.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\ProductColor.cs">
+      <Link>Shared\Models\ProductColor.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\ProductSize.cs">
+      <Link>Shared\Models\ProductSize.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\User.cs">
+      <Link>Shared\Models\User.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Properties\AssemblyInfo.cs">
+      <Link>Shared\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\UserModels.cs">
+      <Link>Shared\SSO\UserModels.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\XamarinSSOClient.cs">
+      <Link>Shared\SSO\XamarinSSOClient.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs">
+      <Link>Shared\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="Views\ProductsView.cs" />
+    <Compile Include="Views\ProductsViewController.cs" />
+    <Compile Include="Views\ProductsView.designer.cs">
+      <DependentUpon>ProductsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductView.cs" />
+    <Compile Include="Views\ProductViewController.cs" />
+    <Compile Include="Views\ProductView.designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBrowserItem.cs" />
+    <Compile Include="ProductsBrowserDataSource.cs" />
+    <Compile Include="Views\ShoppingBasketView.cs" />
+    <Compile Include="Views\ShoppingBasketViewController.cs" />
+    <Compile Include="Views\ShoppingBasketView.designer.cs">
+      <DependentUpon>ShoppingBasketView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShoppingBasketTableViewCell.cs" />
+    <Compile Include="Views\ShoppingBasketTableViewCell.designer.cs">
+      <DependentUpon>ShoppingBasketTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShoppingBasketTableViewCellController.cs" />
+    <Compile Include="ShoppingBasketTableViewSource.cs" />
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginViewController.cs" />
+    <Compile Include="Views\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShippingAddressView.cs" />
+    <Compile Include="Views\ShippingAddressViewController.cs" />
+    <Compile Include="Views\ShippingAddressView.designer.cs">
+      <DependentUpon>ShippingAddressView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProcessingView.cs" />
+    <Compile Include="Views\ProcessingViewController.cs" />
+    <Compile Include="Views\ProcessingView.designer.cs">
+      <DependentUpon>ProcessingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrefillXamarinAccountInstructionsView.cs" />
+    <Compile Include="Views\PrefillXamarinAccountInstructionsViewController.cs" />
+    <Compile Include="Views\PrefillXamarinAccountInstructionsView.designer.cs">
+      <DependentUpon>PrefillXamarinAccountInstructionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BadgeView.cs" />
+    <Compile Include="NSRotatingImageView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainWindow.xib" />
+    <InterfaceDefinition Include="MainMenu.xib" />
+    <InterfaceDefinition Include="Views\ProductsView.xib" />
+    <InterfaceDefinition Include="Views\ProductView.xib" />
+    <InterfaceDefinition Include="Views\ShoppingBasketView.xib" />
+    <InterfaceDefinition Include="Views\ShoppingBasketTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\LoginView.xib" />
+    <InterfaceDefinition Include="Views\ShippingAddressView.xib" />
+    <InterfaceDefinition Include="Views\ProcessingView.xib" />
+    <InterfaceDefinition Include="Views\PrefillXamarinAccountInstructionsView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="..\Shared\bin\Debug\Newtonsoft.Json.dll">
+      <Link>Shared\bin\Debug\Newtonsoft.Json.dll</Link>
+    </None>
+    <None Include="..\Shared\bin\Debug\Shared.dll">
+      <Link>Shared\bin\Debug\Shared.dll</Link>
+    </None>
+    <None Include="..\Shared\bin\Debug\Shared.dll.mdb">
+      <Link>Shared\bin\Debug\Shared.dll.mdb</Link>
+    </None>
+    <None Include="..\Shared\obj\Debug\Shared.csproj.FilesWrittenAbsolute.txt">
+      <Link>Shared\obj\Debug\Shared.csproj.FilesWrittenAbsolute.txt</Link>
+    </None>
+    <None Include="..\Shared\obj\Debug\Shared.dll">
+      <Link>Shared\obj\Debug\Shared.dll</Link>
+    </None>
+    <None Include="..\Shared\obj\Debug\Shared.dll.mdb">
+      <Link>Shared\obj\Debug\Shared.dll.mdb</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="..\Shared\Images\button-image.png">
+      <Link>Shared\Images\button-image.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Shared\Images\shirt_image.png">
+      <Link>Shared\Images\shirt_image.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\XamarinStore.icns" />
+    <BundleResource Include="Resources\XamarinLogo.eps" />
+    <BundleResource Include="Resources\tshirt-alternate.eps" />
+    <BundleResource Include="Resources\tshirt.eps" />
+    <BundleResource Include="Resources\shopping-bag-alternate.eps" />
+    <BundleResource Include="Resources\shopping-bag.eps" />
+    <BundleResource Include="Resources\btn-add-to-basket-alternate.eps" />
+    <BundleResource Include="Resources\btn-add-to-basket.eps" />
+    <BundleResource Include="Resources\tshirt-flying.eps" />
+    <BundleResource Include="Resources\empty-basket.eps" />
+    <BundleResource Include="Resources\btn-green-alternate.eps" />
+    <BundleResource Include="Resources\btn-green.eps" />
+    <BundleResource Include="Resources\success.eps" />
+    <BundleResource Include="Resources\gear.eps" />
+    <BundleResource Include="Resources\user-default-avatar.eps" />
+    <BundleResource Include="Resources\warning.eps" />
+    <BundleResource Include="Resources\fill-details.eps" />
+    <BundleResource Include="Resources\spinner.gif" />
+  </ItemGroup>
+</Project>

@@ -7,6 +7,8 @@ using System.Security.Cryptography;
 
 #if __IOS__
 using MonoTouch.Foundation;
+#elif __MAC__
+using MonoMac.Foundation;
 #endif
 
 namespace XamarinStore
@@ -40,6 +42,12 @@ namespace XamarinStore
 		{
 			byte[] data = await GetImageBytes (email, size, rating);
 			return NSData.FromStream (new System.IO.MemoryStream (data));
+		}
+#elif __MAC__
+		public static async Task<System.IO.MemoryStream> GetImageData (string email, int size, Rating rating = Rating.PG)
+		{
+		byte[] data = await GetImageBytes (email, size, rating);
+		return new System.IO.MemoryStream (data);
 		}
 #endif
 
