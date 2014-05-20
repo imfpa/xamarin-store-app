@@ -5,5 +5,4 @@ obj
 *.suo
 _UpgradeReport_Files
 *.csproj.user
-*.designer.cs
 /tools/xpkg
