@@ -134,9 +134,6 @@
     <Compile Include="..\Shared\SSO\XamarinSSOClient.cs">
       <Link>Shared\SSO\XamarinSSOClient.cs</Link>
     </Compile>
-    <Compile Include="..\Shared\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs">
-      <Link>Shared\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs</Link>
-    </Compile>
     <Compile Include="Views\ProductsView.cs" />
     <Compile Include="Views\ProductsViewController.cs" />
     <Compile Include="Views\ProductsView.designer.cs">
@@ -197,24 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="..\Shared\bin\Debug\Newtonsoft.Json.dll">
-      <Link>Shared\bin\Debug\Newtonsoft.Json.dll</Link>
-    </None>
-    <None Include="..\Shared\bin\Debug\Shared.dll">
-      <Link>Shared\bin\Debug\Shared.dll</Link>
-    </None>
-    <None Include="..\Shared\bin\Debug\Shared.dll.mdb">
-      <Link>Shared\bin\Debug\Shared.dll.mdb</Link>
-    </None>
-    <None Include="..\Shared\obj\Debug\Shared.csproj.FilesWrittenAbsolute.txt">
-      <Link>Shared\obj\Debug\Shared.csproj.FilesWrittenAbsolute.txt</Link>
-    </None>
-    <None Include="..\Shared\obj\Debug\Shared.dll">
-      <Link>Shared\obj\Debug\Shared.dll</Link>
-    </None>
-    <None Include="..\Shared\obj\Debug\Shared.dll.mdb">
-      <Link>Shared\obj\Debug\Shared.dll.mdb</Link>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
